@@ -3,10 +3,8 @@ angular.module("myApp", ['ngRoute', 'ngAnimate'])
 		$rootScope.data = {};
 		$rootScope.total = {};
 		$rootScope.earnings = {};
-
-
-
-}]).run(function ($rootScope, $location, $timeout) {
+}])
+	.run(function ($rootScope, $location, $timeout) {
 		$rootScope.$on('$routeChangeError', function () {
 			$location.path("/error");
 		});
@@ -42,10 +40,8 @@ angular.module("myApp", ['ngRoute', 'ngAnimate'])
 				$rootScope.total.total = $rootScope.total.subtotal + $rootScope.total.tip;
 				$rootScope.earnings.tiptotal = $rootScope.total.tip + ($rootScope.earnings.tiptotal || 0);
 				$rootScope.earnings.mealcount = $rootScope.earnings.mealcount + 1 || 1;
-				$rootScope.earnings.averagetip = $rootScope.earnings.tiptotal / $rootScope.earnings.mealcount;
-
+				$rootScope.earnings.averagetip = $rootScope.earnings.tiptotal / 					$rootScope.earnings.mealcount;
 				$rootScope.data = {};
-
 			}
 		};
 		$scope.cancel = function () {
@@ -56,7 +52,8 @@ angular.module("myApp", ['ngRoute', 'ngAnimate'])
 			$rootScope.earnings = {};
 			$rootScope.total = {};
 		};
-	}).controller('EarningsCtrl', function ($scope, $rootScope) {
+	})
+	.controller('EarningsCtrl', function ($scope, $rootScope) {
 		$scope.reset = function () {
 			$rootScope.data = {};
 			$rootScope.earnings = {};
