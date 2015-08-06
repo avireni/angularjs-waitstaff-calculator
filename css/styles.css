@@ -1,0 +1,127 @@
+@import url(http://fonts.googleapis.com/css?family=Lato);
+body {
+	-webkit-font-smoothing: antialiased;
+	letter-spacing: 1px;
+}
+
+.page-header {
+	text-align: center;
+	color: rgb(91, 192, 222);
+	text-shadow: 1px 1px rgb(6, 112, 144);
+}
+
+nav {
+	text-align: center;
+}
+
+ul {
+	padding-left: 0px;
+}
+
+a {
+	text-decoration: none;
+}
+
+nav li {
+	list-style: none;
+	display: inline-block;
+	padding: 0px 10px;
+	border-right: 1px solid #C5BFBF;
+}
+
+.main {
+	margin-top: 40px;
+}
+
+.home {
+	text-align: justify;
+	line-height: 33px;
+}
+
+.input-group .inputBox {
+	width: 70%;
+}
+
+form {
+	padding: 15px 0;
+}
+
+.form-horizontal .form-group {
+	margin-left: 10px;
+	margin-right: 0px;
+}
+
+.customBtn {
+	margin-right: 5px;
+	padding: 8px 15px;
+}
+
+.loading {
+	position: absolute;
+	height: 100%;
+	top:0;left:0;bottom:0;right:0;
+
+}
+
+.loading:before {
+	position: absolute;
+	content: "";
+	left: 0;
+	bottom: 0;
+	right: 0;
+	top: 0;
+	z-index: 1000;
+	background: rgba(255, 255, 255, 0.95) no-repeat center center;
+	background-image: url("/assets/spiffygif.gif");
+	background-size: 50px;
+}
+
+.animate-view-container {
+	position: relative;
+	min-height: 100%;
+}
+
+/*
+.animate-view.ng-enter,
+.animate-view.ng-leave {
+	transition: 1.5s linear all;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: #eee;
+}
+*/
+.animate-view.ng-enter
+{
+	transition: 1.5s linear all;
+/*
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: #eee;
+*/
+}
+
+.animate-view.ng-enter {
+	opacity: 0;
+	z-index: 100;
+}
+
+.animate-view.ng-enter.ng-enter-active {
+	opacity: 1;
+}
+
+/*
+.animate-view.ng-leave {
+	opacity: 1;
+	z-index: 99;
+}
+
+.animate-view.ng-leave.ng-leave-active {
+	opacity: 0;
+}
+*/
